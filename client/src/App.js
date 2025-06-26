@@ -3,6 +3,7 @@ import './App.css';
 import WeatherDisplay from './components/WeatherDisplay';
 import SearchForm from './components/SearchForm';
 import MemeDisplay from './components/MemeDisplay';
+import CloudBackground from './CloudBackground';
 
 function getQueryParam(name) {
   return new URLSearchParams(window.location.search).get(name);
@@ -75,6 +76,7 @@ function App() {
 
   return (
     <div className="App">
+      <CloudBackground />
       <header className="App-header">
         <h1>🌤️ Weather App</h1>
         <p>Узнайте погоду в любом городе</p>
@@ -107,11 +109,6 @@ function App() {
           {/* Правая секция - мемы */}
           {weatherData && !loading && (
             <div className="meme-section">
-              {memeLoading && (
-                <div className="loading">
-                  <p>Загрузка мема...</p>
-                </div>
-              )}
               <MemeDisplay meme={memeData} />
             </div>
           )}

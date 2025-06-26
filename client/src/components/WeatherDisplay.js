@@ -10,9 +10,7 @@ function WeatherDisplay({ weather }) {
   };
 
   useEffect(() => {
-    setFadeIn(false);
-    const fadeTimer = setTimeout(() => setFadeIn(true), 10);
-    return () => clearTimeout(fadeTimer);
+    setFadeIn(true);
   }, [weather.city, weather.temperature, weather.description, weather.icon]);
 
   useEffect(() => {

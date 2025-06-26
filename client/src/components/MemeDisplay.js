@@ -5,26 +5,12 @@ function MemeDisplay({ meme }) {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    setFadeIn(false);
-    const fadeTimer = setTimeout(() => setFadeIn(true), 10);
-    return () => clearTimeout(fadeTimer);
+    setFadeIn(true);
   }, [meme?.imageUrl, meme?.caption, meme?.image, meme?.text]);
 
-  // Если мем не загружен, показываем заглушку
+  // Если мем не загружен, ничего не рендерим
   if (!meme) {
-    return (
-      <div className="meme-display">
-        <div className="meme-card placeholder">
-          <div className="meme-image-placeholder">
-            <span className="placeholder-icon">🎭</span>
-            <p>Мемы появятся здесь</p>
-          </div>
-          <div className="meme-caption-placeholder">
-            <p>Подпись к мему</p>
-          </div>
-        </div>
-      </div>
-    );
+    return null;
   }
 
   return (
@@ -32,8 +18,8 @@ function MemeDisplay({ meme }) {
       <div className={`meme-card${fadeIn ? ' meme-fade-in' : ''}`}>
         <div className="meme-image-container">
           <img 
-            src={meme.imageUrl || meme.image} 
-            alt={meme.caption || meme.text || "Мем"}
+            src={meme.imageUrl} 
+            alt={meme.caption || "Мем"}
             className="meme-image"
             onError={(e) => {
               e.target.style.display = 'none';
@@ -47,7 +33,7 @@ function MemeDisplay({ meme }) {
         </div>
         
         <div className="meme-caption">
-          <p>{meme.caption || meme.text || "Без подписи"}</p>
+          <p>{meme.caption || "Без подписи"}</p>
         </div>
         
         {meme.source && (

@@ -4,7 +4,7 @@
 }
 
 .meme-card {
-  background: #fffbe9;
+  background: #f8f9fa;
   border-radius: 16px;
   border: 1.5px solid #f0f0f0;
   box-shadow: none;
@@ -161,5 +161,20 @@
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+.meme-image-fade-in {
+  animation: memeImageFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes memeImageFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 } 
