@@ -86,4 +86,6 @@ app.listen(PORT, () => {
     console.warn('⚠️  ВНИМАНИЕ: API ключ OpenWeatherMap не настроен!');
     console.warn('   Добавьте OPENWEATHER_API_KEY в .env файл для работы с реальными данными.');
   }
-}); 
+});
+
+module.exports = app; 
