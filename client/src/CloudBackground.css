@@ -29,20 +29,22 @@
 
 .cloud2 {
   top: 30vh;
-  left: -250px;
+  left: 20vw;
   width: 140px;
   height: 55px;
   background-image: url('data:image/svg+xml;utf8,<svg width="140" height="55" viewBox="0 0 140 55" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="27" rx="50" ry="27" fill="%23fff"/><ellipse cx="100" cy="22" rx="30" ry="18" fill="%23fff"/><ellipse cx="120" cy="35" rx="20" ry="12" fill="%23fff"/></svg>');
   animation: cloud-move 80s linear infinite;
+  animation-delay: -20s;
 }
 
 .cloud3 {
   top: 60vh;
-  left: -180px;
+  left: 60vw;
   width: 120px;
   height: 45px;
   background-image: url('data:image/svg+xml;utf8,<svg width="120" height="45" viewBox="0 0 120 45" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="40" cy="22" rx="40" ry="22" fill="%23fff"/><ellipse cx="80" cy="18" rx="25" ry="14" fill="%23fff"/><ellipse cx="100" cy="30" rx="15" ry="9" fill="%23fff"/></svg>');
   animation: cloud-move 70s linear infinite;
+  animation-delay: -40s;
 }
 
 .cloud4 {
@@ -52,24 +54,27 @@
   height: 60px;
   background-image: url('data:image/svg+xml;utf8,<svg width="160" height="60" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="30" rx="60" ry="30" fill="%23fff"/><ellipse cx="120" cy="25" rx="35" ry="18" fill="%23fff"/><ellipse cx="140" cy="40" rx="20" ry="10" fill="%23fff"/></svg>');
   animation: cloud-move 90s linear infinite;
+  animation-delay: -30s;
 }
 
 .cloud5 {
   top: 50vh;
-  left: -160px;
+  left: 80vw;
   width: 100px;
   height: 35px;
   background-image: url('data:image/svg+xml;utf8,<svg width="100" height="35" viewBox="0 0 100 35" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="35" cy="17" rx="35" ry="17" fill="%23fff"/><ellipse cx="70" cy="14" rx="20" ry="10" fill="%23fff"/><ellipse cx="90" cy="25" rx="10" ry="6" fill="%23fff"/></svg>');
   animation: cloud-move 65s linear infinite;
+  animation-delay: -50s;
 }
 
 .cloud6 {
   top: 15vh;
-  left: -120px;
+  left: 40vw;
   width: 90px;
   height: 30px;
   background-image: url('data:image/svg+xml;utf8,<svg width="90" height="30" viewBox="0 0 90 30" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="15" rx="30" ry="15" fill="%23fff"/><ellipse cx="60" cy="12" rx="18" ry="9" fill="%23fff"/><ellipse cx="80" cy="20" rx="10" ry="5" fill="%23fff"/></svg>');
   animation: cloud-move 50s linear infinite;
+  animation-delay: -15s;
   opacity: 0.6;
 }
 
@@ -80,36 +85,40 @@
   height: 40px;
   background-image: url('data:image/svg+xml;utf8,<svg width="110" height="40" viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="40" cy="20" rx="40" ry="20" fill="%23fff"/><ellipse cx="80" cy="16" rx="20" ry="10" fill="%23fff"/><ellipse cx="100" cy="28" rx="10" ry="6" fill="%23fff"/></svg>');
   animation: cloud-move 75s linear infinite;
+  animation-delay: -35s;
   opacity: 0.5;
 }
 
 .cloud8 {
   top: 70vh;
-  left: -140px;
+  left: 10vw;
   width: 130px;
   height: 50px;
   background-image: url('data:image/svg+xml;utf8,<svg width="130" height="50" viewBox="0 0 130 50" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="25" rx="50" ry="25" fill="%23fff"/><ellipse cx="100" cy="20" rx="25" ry="12" fill="%23fff"/><ellipse cx="120" cy="35" rx="10" ry="7" fill="%23fff"/></svg>');
   animation: cloud-move 85s linear infinite;
+  animation-delay: -25s;
   opacity: 0.7;
 }
 
 .cloud9 {
   top: 25vh;
-  left: -100px;
+  left: 70vw;
   width: 70px;
   height: 25px;
   background-image: url('data:image/svg+xml;utf8,<svg width="70" height="25" viewBox="0 0 70 25" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="25" cy="12" rx="25" ry="12" fill="%23fff"/><ellipse cx="50" cy="10" rx="12" ry="6" fill="%23fff"/></svg>');
   animation: cloud-move 40s linear infinite;
+  animation-delay: -10s;
   opacity: 0.4;
 }
 
 .cloud10 {
   top: 85vh;
-  left: -200px;
+  left: 50vw;
   width: 160px;
   height: 60px;
   background-image: url('data:image/svg+xml;utf8,<svg width="160" height="60" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="30" rx="60" ry="30" fill="%23fff"/><ellipse cx="120" cy="25" rx="35" ry="18" fill="%23fff"/><ellipse cx="140" cy="40" rx="20" ry="10" fill="%23fff"/></svg>');
   animation: cloud-move 100s linear infinite;
+  animation-delay: -45s;
   opacity: 0.5;
 }
 
