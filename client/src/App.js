@@ -4,6 +4,7 @@ import WeatherDisplay from './components/WeatherDisplay';
 import SearchForm from './components/SearchForm';
 import MemeDisplay from './components/MemeDisplay';
 import CloudBackground from './CloudBackground';
+import { API_ENDPOINTS } from './config';
 
 function getQueryParam(name) {
   return new URLSearchParams(window.location.search).get(name);
@@ -30,7 +31,7 @@ function App() {
     setError(null);
     
     try {
-      const response = await fetch(`/api/weather/${city}`);
+      const response = await fetch(`${API_ENDPOINTS.WEATHER}/${city}`);
       if (!response.ok) {
         throw new Error('Ошибка при получении данных');
       }
@@ -49,7 +50,7 @@ function App() {
   const fetchMeme = async (temp) => {
     setMemeLoading(true);
     try {
-      let url = '/api/memes/random';
+      let url = `${API_ENDPOINTS.MEMES}/random`;
       if (typeof temp === 'number') {
         url += `?temp=${temp}`;
       }
