@@ -13,6 +13,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/build')));
 
+// --- Weather cache ---
+const weatherCache = {};
+const CACHE_TTL = 10 * 60 * 1000; // 10 минут
+
 // Routes
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
@@ -21,6 +25,13 @@ app.get('/api/health', (req, res) => {
 app.get('/api/weather/:city', async (req, res) => {
   try {
     const { city } = req.params;
+    const cityKey = city.trim().toLowerCase();
+    const now = Date.now();
+
+    // Проверка кэша
+    if (weatherCache[cityKey] && (now - weatherCache[cityKey].timestamp < CACHE_TTL)) {
+      return res.json(weatherCache[cityKey].data);
+    }
     
     // Проверяем наличие API ключа
     if (!OPENWEATHER_API_KEY || OPENWEATHER_API_KEY === 'your_api_key_here') {
@@ -47,6 +58,11 @@ app.get('/api/weather/:city', async (req, res) => {
       timestamp: new Date().toISOString()
     };
     
+    // Сохраняем в кэш
+    weatherCache[cityKey] = {
+      data: processedData,
+      timestamp: now
+    };
     res.json(processedData);
   } catch (error) {
     console.error('Error fetching weather data:', error.message);
